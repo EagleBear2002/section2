@@ -9,6 +9,6 @@
           c:_1="The Beatles"/>
 
     <bean id="cdPlayer" class="soundsystem.CDPlayer"
-          c:_-ref="compactDisc"/>
+          c:_0-ref="compactDisc"/>
 
 </beans>
