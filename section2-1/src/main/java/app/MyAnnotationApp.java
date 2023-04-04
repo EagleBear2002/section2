@@ -6,9 +6,9 @@ import soundsystem.CDPlayerConfig;
 import soundsystem.MediaPlayer;
 
 public class MyAnnotationApp {
-    public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
-        MediaPlayer player = ctx.getBean(MediaPlayer.class);
-        player.play();
-    }
+	public static void main(String[] args) {
+		ApplicationContext ctx = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
+		MediaPlayer player = ctx.getBean(MediaPlayer.class);
+		player.play();
+	}
 }

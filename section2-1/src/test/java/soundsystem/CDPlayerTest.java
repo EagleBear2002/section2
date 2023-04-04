@@ -14,29 +14,29 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
-
-    @Rule
-    public final StandardOutputStreamLog log = new StandardOutputStreamLog();
+	
+	@Rule
+	public final StandardOutputStreamLog log = new StandardOutputStreamLog();
 
 //    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
-
-    @Autowired
-    private MediaPlayer player;
-
-    @Autowired
-    private CompactDisc cd;
-
-    @Test
-    public void cdShouldNotBeNull() {
-        assertNotNull(cd);
-    }
-
-    @Test
-    public void play() {
-        player.play();
-        assertEquals(
-                "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.getProperty("line.separator"),
-                log.getLog());
-    }
-
+	
+	@Autowired
+	private MediaPlayer player;
+	
+	@Autowired
+	private CompactDisc cd;
+	
+	@Test
+	public void cdShouldNotBeNull() {
+		assertNotNull(cd);
+	}
+	
+	@Test
+	public void play() {
+		player.play();
+		assertEquals(
+				"Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.getProperty("line.separator"),
+				log.getLog());
+	}
+	
 }

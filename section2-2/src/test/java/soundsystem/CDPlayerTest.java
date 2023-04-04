@@ -13,19 +13,19 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
-
-    @Rule
-    public final StandardOutputStreamLog log = new StandardOutputStreamLog();
-
-    @Autowired
-    private MediaPlayer player;
-
-    @Test
-    public void play() {
-        player.play();
-        assertEquals(
-                "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.getProperty("line.separator"),
-                log.getLog());
-    }
-
+	
+	@Rule
+	public final StandardOutputStreamLog log = new StandardOutputStreamLog();
+	
+	@Autowired
+	private MediaPlayer player;
+	
+	@Test
+	public void play() {
+		player.play();
+		assertEquals(
+				"Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles" + System.getProperty("line.separator"),
+				log.getLog());
+	}
+	
 }

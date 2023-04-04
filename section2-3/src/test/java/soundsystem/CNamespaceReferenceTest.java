@@ -13,19 +13,19 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class CNamespaceReferenceTest {
-
-    @Rule
-    public final StandardOutputStreamLog log = new StandardOutputStreamLog();
-
-    @Autowired
-    private MediaPlayer player;
-
-    @Test
-    public void play() {
-        player.play();
-        assertEquals(
-                "Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n",
-                log.getLog());
-    }
-
+	
+	@Rule
+	public final StandardOutputStreamLog log = new StandardOutputStreamLog();
+	
+	@Autowired
+	private MediaPlayer player;
+	
+	@Test
+	public void play() {
+		player.play();
+		assertEquals(
+				"Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n",
+				log.getLog());
+	}
+	
 }
